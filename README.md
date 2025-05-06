@@ -1,5 +1,4 @@
-# Projeto-Interdisciplinar-2Semestre
-Projeto Interdisciplinar do 2° Semestre
+# Projeto-Interdisciplinar-2Semestre do curso Desenvolvimento de Software Multiplataforma
 
 Integrantes do grupo:
 RA	Nome completo	e-mail
