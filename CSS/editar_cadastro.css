@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+
+/*Container FOrmulário*/
+.container-form{
+    display: inline-block;
+    margin: auto;
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    border: 1px solid #95613C;
+    border-radius: 25px;
+}
+
+
+/*Div Formulário*/
+.form{
+    width: auto;
+    margin: auto;
+}
+
+.form h1, p{
+    text-align: center;
+    padding-top: 50px;
+    
+}
+
+.form h1{
+    color: #95613C;
+}
+
+.form a{
+    color: #95613C;
+    text-decoration: none;
+    word-wrap: break-word;
+    margin: auto;
+}
+
+.form a:hover{
+    text-decoration: underline;
+    transition: 0.8s;
+}
+
+.inputs{
+    padding-top: 70px;
+    padding-bottom: 50px;
+    justify-content: center;
+}
+
+.campos{
+    text-align: left;
+}
+
+.campos label{
+    color: #95613C;
+    text-align: left;
+    width: auto;
+}
+
+.botao{
+    margin-top: 30px;
+}
+.btn{
+    display: flex;
+    background-color: #95613C;
+    color: #fff;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.btn:hover{
+    background-color: #ffffff;
+    border: 1px solid #95613C;
+    color: #95613C;
+}
+
+#inputCancelar{
+    color: #95613C;
+    background-color: #fff;
+    border: 1px solid #95613C;
+}
+
+#inputCancelar:hover{
+    background-color: #95613C;
+    color: #fff;
+}
+
+
+/*Div imagem*/
+.container-imagem{
+    width: 30%;
+    margin: auto;
+}
+
+.imagem{
+    padding-left: 50px;
+}
+
+.imagem p{
+    text-align: center;
+}
+
+
+/*Responsividade*/
+@media screen and (max-width: 1000px){
+    .container-imagem{
+        display: none;
+    }
+
+    .form{
+        width: 100%;
+        margin: auto;
+        box-sizing: content-box;
+    }
+
+
+}
+
+
+@media screen and (max-width: 575px){
+    .btn{
+        display: inline-block;
+    }
+
+    .rodape{
+        font-size: 0.8em;
+    }
+
+}

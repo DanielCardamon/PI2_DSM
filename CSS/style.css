@@ -1,0 +1,59 @@
+/*Config Geral*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho{
+    width: 100%;
+    margin: 0;
+}
+
+
+/*Cabeçalho*/
+.cabecalho{
+    background-color: #400601;
+}
+
+.cabecalho img{
+    width: 70%;
+}
+
+.cabecalho a{
+    color: #FFF;
+}
+
+.cabecalho a:hover{
+    color: #000;
+}
+
+.dropdown-item{
+    background-color: #400601;
+}
+
+
+/*Rodape*/
+.rodape{
+    background-color: #400601;
+    margin: 0;
+}
+
+.rodape p{
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/*Responsividae*/
+@media screen and (max-width: 575px){
+    .rodape{
+        font-size: 0.8em;
+    }
+
+    .cabecalho img{
+        width: 50%;
+    }
+
+}

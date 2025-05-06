@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/home_reservas.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Cabeçalho-->
+    <div class="row gx-0">
+        <div class="col px-0 text-center">
+            <nav class="navbar navbar-expand-sm p-3 cabecalho">
+                <div class="container-fluid d-flex justify-content-evenly">
+                    <div class="logo">
+                        <a class="navbar-brand" href="/"><img
+                                src="https://user-images.githubusercontent.com/112758733/242298689-cc0ea27e-fe34-4c63-a85e-094a9fda1ff8.png"
+                                alt="Logo genérica do restaurante"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link " aria-current="page" href="/">Home &#x1F3E0;</a>
+                            <a class="nav-link" href="#">Cardápio &#x1F4D6;</a>
+                            <a class="nav-link" href="#">Galeria &#x1F4F7;</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Reservas &#x1F4C5;
+                                </a>
+                                <ul class="dropdown-menu" style="background-color: #400601;">
+                                    <li><a class="dropdown-item" href="/reserva">Reservar</a></li>
+                                    <li><a class="dropdown-item" href="/historico/{{id}}">Minhas reservas</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Conta&#x1F465;
+                                </a>
+                                <ul class="dropdown-menu" style="background-color: #400601;">
+                                    <li><a class="dropdown-item" href="/login">Login</a></li>
+                                    <li><a class="dropdown-item" href="#">Minha conta </a></li>
+                                </ul>
+                            </li>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    {{{body}}}
+
+    <!-- Rodapé -->
+    <div class="text-center">
+        <div class="row rodape px-0">
+            <p>© Single Concept Restaurante - Todos os direitos reservados</p>
+        </div>
+    </div>
+</body>
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap%27');
+
+    /* style.css*/
+    /*Config Geral*/
+    * {
+        font-family: 'Cardo', serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .cabecalho {
+        width: 100%;
+        margin: 0;
+    }
+
+
+    /*Cabeçalho*/
+    .cabecalho {
+        background-color: #400601;
+    }
+
+    .cabecalho img {
+        width: 70%;
+    }
+
+    .cabecalho a {
+        color: #FFF;
+    }
+
+    .cabecalho a:hover {
+        color: #000;
+    }
+
+    .dropdown-item {
+        background-color: #400601;
+    }
+
+
+    /*Rodape*/
+    .rodape {
+        background-color: #400601;
+        margin: 0;
+    }
+
+    .rodape p {
+        color: #fff;
+        margin: auto;
+        text-align: center;
+        padding: 10px;
+    }
+
+
+    /*Responsividae*/
+    @media screen and (max-width: 575px) {
+        .rodape {
+            font-size: 0.8em;
+        }
+
+        .cabecalho img {
+            width: 50%;
+        }
+
+    }
+
+    /*home_reservas.css*/
+    /*Div imagem de fundo*/
+    .img_fundo {
+        height: 190px;
+        background-image: url(https://github.com/leonardollima/Projeto-Interdisciplinar-2Semestre/blob/main/Imagens/pexels-fauxels-3184192.jpg?raw=true);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+
+    /*Corpo*/
+    .principal {
+        border: 2px solid #95613C;
+        border-radius: 20px;
+        padding: 30px;
+        margin: auto;
+        width: 55%;
+        height: auto;
+        margin-top: 50px;
+    }
+
+
+    /*Div informações*/
+    .info_geral {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .infos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+
+    /*Infos esquerda*/
+    .info_esq {
+        display: flex;
+        width: 40%;
+    }
+
+    /*Div Logo*/
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        border: 1px solid #95613C;
+        border-radius: 25px;
+        padding: 20px;
+    }
+
+    .logo img {
+        max-width: 50%;
+    }
+
+
+    /*Div informações sobre o restaurante*/
+    .info_restaurante {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #95613C;
+        border-radius: 25px;
+    }
+
+    .textos {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 15px;
+    }
+
+    .textos h3 {
+        color: #95613C;
+        font-size: medium;
+    }
+
+    .textos p {
+        font-size: smaller;
+    }
+
+
+    /*Infos direita*/
+    .info_dir {
+        width: 40%;
+    }
+
+    .info_dir iframe {
+        border: 1px solid #95613C;
+        border-radius: 25px;
+        margin-bottom: 10px;
+    }
+
+    /*Botões*/
+    .botao {
+        margin-top: 50px;
+    }
+
+    .btn {
+        display: flex;
+        background-color: #95613C;
+        color: #fff;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .btn:hover {
+        background-color: #ffffff;
+        border: 1px solid #95613C;
+        color: #95613C;
+    }
+
+    #inputCancelar {
+        color: #95613C;
+        background-color: #fff;
+        border: 1px solid #95613C;
+    }
+
+    #inputCancelar:hover {
+        background-color: #95613C;
+        color: #fff;
+    }
+
+
+    /*Responsividade*/
+    @media screen and (max-width: 1020px) {
+        .principal {
+            width: 70%;
+        }
+
+        .info_dir {
+            margin: auto;
+            width: 100%;
+        }
+
+        .info_esq {
+            margin: auto;
+            width: 100%;
+        }
+
+        .info_restaurante {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media screen and (max-width: 420px) {
+        .principal {
+            width: 80%;
+        }
+    }
+
+
+    /*reserva*/
+    @charset "UTF-8";
+
+
+/*Container FOrmulário*/
+.container-form{
+    display: flex;
+    margin: 40px;
+    width: 80%;
+    justify-content: space-between;
+    border: 1px solid #95613C;
+    border-radius: 25px;
+    padding: 5%;
+    margin-bottom: 7%;
+}
+
+
+/*Div Formulário*/
+.form{
+    width: 50%;
+}
+
+.form h1, p{
+    text-align: left;
+    
+}
+
+.form h1{
+    color: #95613C;
+}
+
+.form a{
+    color: #95613C;
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+.form a:hover{
+    text-decoration: underline;
+    transition: 0.8s;
+}
+
+.inputs{
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.campos{
+    text-align: left;
+}
+
+.campos label{
+    color: #95613C;
+    text-align: left;
+    margin-top: 15px;
+    width: auto;
+}
+
+
+.btn{
+    display: flex;
+    background-color: #95613C;
+    color: #fff;
+    width: 80%;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn:hover{
+    background-color: #ffffff;
+    border: 1px solid #95613C;
+    color: #95613C;
+}
+
+
+/*Div imagem*/
+.container-imagem{
+    width: 30%;
+    margin: auto;
+}
+
+.imagem{
+    padding-left: 50px;
+}
+
+.imagem p{
+    text-align: center;
+}
+
+
+/*Responsividade*/
+@media screen and (max-width: 1000px){
+    .container-imagem{
+        display: none;
+    }
+
+    .form{
+        width: 90%;
+        margin: auto;
+        box-sizing: content-box;
+    }
+
+    .form h1{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 575px){
+    .btn{
+        display: inline-block;
+    }
+
+    .rodape{
+        font-size: 0.8em;
+    }
+
+}
+/*editarreserva*/
+
+@charset "UTF-8";
+
+
+/*Container FOrmulário*/
+.container-form{
+    display: flex;
+    margin: 40px;
+    width: 80%;
+    justify-content: space-between;
+    border: 1px solid #95613C;
+    border-radius: 25px;
+    padding: 5%;
+    margin-bottom: 7%;
+}
+
+
+/*Div Formulário*/
+.form{
+    width: 50%;
+}
+
+.form h1, p{
+    text-align: left;
+    
+}
+
+.form h1{
+    color: #95613C;
+}
+
+.form a{
+    color: #95613C;
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+.form a:hover{
+    text-decoration: underline;
+    transition: 0.8s;
+}
+
+.inputs{
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.campos{
+    text-align: left;
+}
+
+.campos label{
+    color: #95613C;
+    text-align: left;
+    margin-top: 15px;
+    width: auto;
+}
+
+.botao{
+    margin-top: 50px;
+}
+
+.btn{
+    display: flex;
+    background-color: #95613C;
+    color: #fff;
+    width: 80%;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.btn:hover{
+    background-color: #ffffff;
+    border: 1px solid #95613C;
+    color: #95613C;
+}
+
+#inputCancelar{
+    color: #95613C;
+    background-color: #fff;
+    border: 1px solid #95613C;
+}
+
+#inputCancelar:hover{
+    background-color: #95613C;
+    color: #fff;
+}
+
+
+/*Div imagem*/
+.container-imagem{
+    width: 30%;
+    margin: auto;
+}
+
+.imagem{
+    padding-left: 50px;
+}
+
+.imagem p{
+    text-align: center;
+}
+
+
+/*Responsividade*/
+@media screen and (max-width: 1000px){
+    .container-imagem{
+        display: none;
+    }
+
+    .form{
+        width: 90%;
+        margin: auto;
+        box-sizing: content-box;
+    }
+
+    .form h1{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 575px){
+    .btn{
+        display: inline-block;
+    }
+
+    .rodape{
+        font-size: 0.8em;
+    }
+
+}
+</style>
+
+</html>

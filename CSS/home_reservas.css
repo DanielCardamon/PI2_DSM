@@ -1,0 +1,151 @@
+/*Div imagem de fundo*/
+.img_fundo{
+    height: 190px;
+    background-image: url(../Imagens/pexels-fauxels-3184192.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/*Corpo */
+.principal{
+    border: 2px solid #95613C;
+    border-radius: 20px;
+    padding: 30px;
+    margin: auto;
+    width: 55%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+/*Div informações*/
+.info_geral{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.infos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+/*Infos esquerda*/
+.info_esq{
+    display: flex;
+    width: 40%;
+}
+
+    /*Div Logo*/
+        .logo{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            border: 1px solid #95613C;
+            border-radius: 25px;
+            padding: 20px;
+        }
+
+        .logo img{
+            max-width: 50%;
+        }
+
+
+    /*Div informações sobre o restaurante*/
+        .info_restaurante{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #95613C;
+            border-radius: 25px;
+        }
+
+        .textos{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            padding: 15px;
+        }
+        .textos h3{
+            color: #95613C;
+            font-size: medium;
+        }
+
+        .textos p{
+            font-size: smaller;
+        }
+
+
+/*Infos direita*/
+.info_dir{
+    width: 40%;
+}
+
+.info_dir iframe{
+    border: 1px solid #95613C;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+/*Botões*/
+.botao{
+    margin-top: 50px;
+}
+
+.btn{
+    display: flex;
+    background-color: #95613C;
+    color: #fff;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.btn:hover{
+    background-color: #ffffff;
+    border: 1px solid #95613C;
+    color: #95613C;
+}
+
+#inputCancelar{
+    color: #95613C;
+    background-color: #fff;
+    border: 1px solid #95613C;
+}
+
+#inputCancelar:hover{
+    background-color: #95613C;
+    color: #fff;
+}
+
+
+/*Responsividade*/
+@media screen and (max-width: 1020px){
+    .principal{
+        width: 70%;
+    }
+
+    .info_dir{
+        margin: auto;
+        width: 100%;
+    }
+
+    .info_esq{
+        margin: auto;
+        width: 100%;
+    }
+
+    .info_restaurante{
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .principal{
+        width: 80%;
+    }
+}

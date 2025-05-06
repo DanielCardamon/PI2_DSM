@@ -1,0 +1,19 @@
+
+INSERT INTO `restaurantes` (`id`, `nome`, `CNPJ`) VALUES (NULL, 'restaurantes', '0');
+INSERT INTO `unidades` (`id`, `CNPJ`, `endereco`, `IdRestaurantes`) VALUES (NULL, '01', 'rua 1', '1'), (NULL, '02', 'rua 2', '1');
+INSERT INTO `ambientes` (`id`, `nome`, `IdUnidade`) VALUES (NULL, 'NãoFumante', '1'), (NULL, 'Fumante', '1'),(NULL, 'Festa', '2'), (NULL, 'Comum', '2');
+INSERT INTO `mesas` (`id`, `Assentos`, `IdAmbientes`) VALUES (NULL, '4', '1'),(NULL, '4', '1'),(NULL, '4', '1'),(NULL, '4', '1'),(NULL, '2', '1'),(NULL, '2', '1'),(NULL, '2', '1'),(NULL, '2', '1'),(NULL, '2', '1'),(NULL, '2', '1'),(NULL, '2', '2'),(NULL, '2', '2'),(NULL, '2', '2'),(NULL, '2', '2'),(NULL, '2', '2');
+INSERT INTO `mesas` (`id`, `Assentos`, `IdAmbientes`) VALUES (NULL, '4', '3'),(NULL, '4', '3'),(NULL, '4', '3'),(NULL, '4', '3'),(NULL, '2', '3'),(NULL, '2', '3'),(NULL, '2', '3'),(NULL, '2', '3'),(NULL, '2', '3'),(NULL, '2', '3'),(NULL, '2', '4'),(NULL, '2', '4'),(NULL, '2', '4'),(NULL, '2', '4'),(NULL, '2', '4');
+
+INSERT INTO `horarios` (`id`, `HORAfuncionamento`) VALUES (NULL, '18'), (NULL, '19'), (NULL, '20'), (NULL, '21'), (NULL, '22'), (NULL, '23'), (NULL, '00');
+
+INSERT INTO `periodos` (`id`, `PeriodosDATA`, `Idhorarios`) Select NULL, DATE(NOW()), `horarios`.id FROM `horarios`;
+INSERT INTO `periodos` (`id`, `PeriodosDATA`, `Idhorarios`) Select NULL, DATE(DATE_ADD(NOW(), INTERVAL 1 DAY)), `horarios`.id FROM `horarios`;
+INSERT INTO `periodos` (`id`, `PeriodosDATA`, `Idhorarios`) Select NULL, DATE(DATE_ADD(NOW(), INTERVAL 2 DAY)), `horarios`.id FROM `horarios`;
+INSERT INTO `periodos` (`id`, `PeriodosDATA`, `Idhorarios`) Select NULL, DATE(DATE_ADD(NOW(), INTERVAL 3 DAY)), `horarios`.id FROM `horarios`;
+INSERT INTO `periodos` (`id`, `PeriodosDATA`, `Idhorarios`) Select NULL, DATE(DATE_ADD(NOW(), INTERVAL 4 DAY)), `horarios`.id FROM `horarios`;
+INSERT INTO `periodos` (`id`, `PeriodosDATA`, `Idhorarios`) Select NULL, DATE(DATE_ADD(NOW(), INTERVAL 5 DAY)), `horarios`.id FROM `horarios`;
+INSERT INTO `periodos` (`id`, `PeriodosDATA`, `Idhorarios`) Select NULL, DATE(DATE_ADD(NOW(), INTERVAL 6 DAY)), `horarios`.id FROM `horarios`;
+
+INSERT INTO `mesasperiodos` (`Disponivel`, `PeriodoId`, `MesaId`) Select TRUE, `periodos`.id ,`mesas`.id FROM `periodos`,`mesas`;
+
