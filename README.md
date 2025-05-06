@@ -2,14 +2,12 @@
 # Projeto-Interdisciplinar-2Semestre do curso Desenvolvimento de Software Multiplataforma
 
 Integrantes do grupo:
-RA	Nome completo	e-mail
+RA	Nome completo	
 1111392221006	Daniel Viegas Cardamoni	
 1111392221043	Eloah Baracho dos Santos	
 1111392221007
 1111392221015	Felipe Selva Rocha Alves
 Leonardo da Silva Lima	
-
-Título do Projeto e/ou logotipo
 
 Objetivo do Projeto
  Descrição da finalidade do projeto, alinhada a especificação. Lembrando que o mesmo tem que ser realista, consistente e claro.
